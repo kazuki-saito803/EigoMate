@@ -13,7 +13,7 @@ LINE_CHANNEL_ACCESS_TOKEN = os.getenv('LINE_CHANNEL_ACCESS_TOKEN')
 line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(LINE_CHANNEL_SECRET)
 
-@app.route(route="http_trigger_line")
+@app.route(route="eigomatefunc")
 def http_trigger_line(req: func.HttpRequest) -> func.HttpResponse:
     signature = req.headers.get('X-Line-Signature')
     body = req.get_body().decode('utf-8')
